@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Room Creator</title>
+    <script src="script.js"></script>
+    <script src="styling.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Basic Room Creator</h1>
+    <div id="editor">
+      <h3 id="rmNm">Room Name</h3>
+      <input class="inputBox" id="roomName" placeholder="Room Name" />
+
+      <h3>Room Description</h3>
+      <input class="inputBox" id="roomDescription" placeholder="Room Description" />
+
+      <h3>Extra Notes</h3>
+      <input class="inputBox" id="notes" placeholder="Use these blocks..." />
+
+      <h3>Room Type</h3>
+      <select class="inputBox" id="roomType">
+        <option value="Wave" selected> Wave</option>
+        <option value="Boss">          Boss</option>
+        <option value="Wave+Boss">     Wave+Boss</option>
+      </select>
+
+      <h3>Dimension</h3>
+      <select class="inputBox" id="dimension">
+        <option value="Overworld" selected> Overworld</option>
+        <option value="Nether">             Nether</option>
+        <option value="End">                End</option>
+      </select>
+
+      <h3>Spawn Point</h3>
+      <h4>Don't do unless you know</h4>
+      <div class="inputBox" id="spawnPoint">
+        <input class="spawn" id="xSpawn" placeholder="x" />
+        <input class="spawn" id="ySpawn" placeholder="y" />
+        <input class="spawn" id="zSpawn" placeholder="z" />
+      </div>
+      <br />
+      <h3>Spawn Rotation</h3>
+      <div class="inputBox" id="spawnRotation">
+        <input class="spawn" id="xRot" placeholder="xRot" />
+        <input class="spawn" id="yRot" placeholder="yRot" />
+        <input class="spawn" id="zRot" placeholder="zRot" />
+      </div>
+      <br>
+    </div>
+
+    <div id="JSONprev">
+      <h3>JSON preview</h3>
+
+      <div id="prevBox"></div>
+    </div>
+
+    <div id="notification"><p>Succesfully Downloaded<br><br><span id="adjustFile">You can further edit the file if you open it in <a href="https://vscode.dev">https://www.vscode.dev</a></span></p></div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #001020;
+  font-family: sans-serif;
+}
+
+/* Split screen into two equal halves */
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Left Half: Editor */
+#editor {
+  position: absolute;
+  width: 50vw;
+  height: 90vh;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5vh;
+}
+
+/* Right Half: JSON Preview */
+#JSONprev {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  padding: 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 5vh;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  text-align: center;
+  color: #FFF;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+  text-align: center;
+  color: #FFF;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 5px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 15px 0 5px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+h5 {
+  font-size: 0.8rem;
+  margin: 15px 0 5px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+/* Form Inputs */
+input,
+select {
+  border: solid 3px #0097FF;
+  border-radius: 5px;
+  height: 40px;
+  width: 80%;
+  background-color: #FFF;
+  font-size: 1rem;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+/* Make X, Y, Z inputs sit side-by-side and centered */
+#spawnPoint,
+#spawnRotation {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.spawn {
+  width: 80%; /* Keeps them compact and nicely proportioned */
+  height: 40px;
+}
+
+/* Download Button */
+#downloadBtn {
+  border: solid 3px #0097FF;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin-top: 25px;
+  width: 80%;
+  height: 45px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* JSON Preview Display Area */
+#prevBox {
+  width: 90%;
+  height: 80vh;
+  background-color: #1E1E1E;
+  color: #00FF66;
+  font-family: monospace;
+  padding: 15px;
+  border-radius: 5px;
+  border: 3px solid #0097FF;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+.inputBox {
+  transition: 300ms ease-in-out;
+}
+
+#notification {
+  position: absolute;
+  left: 50vw;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 20vw;
+  border: solid #0097FF 3px;
+  border-radius: 5vw;
+  background-color: #001020;
+  text-align: center;
+  color: white;
+  display: none;
+  font-size: 3vh;
+  transition: 1000ms;
+}
+
+#adjustFile {
+  font-size: 2vh;
+}
